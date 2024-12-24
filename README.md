@@ -21,23 +21,29 @@ This repository demonstrates how to build and push a Docker image to AWS Elastic
 ### 1. Authenticate Docker to AWS ECR
 Run the following AWS CLI command to authenticate Docker with your AWS ECR:
 
-aws ecr get-login-password --region <your-region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com
+**aws ecr get-login-password --region <your-region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com**
 
 • Replace:
-• <your-region> with your AWS region (e.g., us-east-1).
-• <aws_account_id> with your AWS account ID.
+• **<your-region>** with your AWS region (e.g., us-east-1).
+• **<aws_account_id>** with your AWS account ID.
+
+## Demo images
 
 ![login-to-aws-ecr](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/login.png)
 
+
 ![login-to-aws-ecr1](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/login1.png)
+
 
 2. Build the Docker Image
 
 Navigate to the folder with your Dockerfile and build the image:
 
-docker build -t <image-name> .
+**docker build -t <image-name>** .
 
-• Replace <image-name> with a descriptive name for your image.
+• Replace **<image-name>** with a descriptive name for your image.
+
+## Demo image
 
 ![build](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/build.png)
 
@@ -45,13 +51,16 @@ docker build -t <image-name> .
 
 Tag your image for AWS ECR:
 
-docker tag <image-name>:latest <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com/<repository-name>:<tag>
+**docker tag <image-name>:latest <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com/<image-name>:<tag>**
 
 • Replace:
-• <repository-name> with your ECR repository name.
-• <tag> with a version (e.g., v1 or latest).
+• **<image-name>** with your ECR repository name.
+• **<tag>** with a version (e.g., v1 or latest).
+
+## demo image
 
 ![tag](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/tag.png)
+
 
 ![tag1](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/tag1.png)
 
@@ -59,14 +68,21 @@ docker tag <image-name>:latest <aws_account_id>.dkr.ecr.<your-region>.amazonaws.
 
 Push the tagged image to AWS ECR:
 
-docker push <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com/<repository-name>:<tag>
+**docker push <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com/<repository-name>:<tag>**
+
+
+## Demo image
 
 ![push](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/push.png)
+
+
 ![push1](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/push1.png)
 
 5. Verify the Image in ECR
 
 Go to the AWS Management Console → ECR → Your Repository to see the pushed image.
+
+## Demo image
 
 ![Image](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/images.png)
 
