@@ -43,9 +43,6 @@ Navigate to the folder with your Dockerfile and build the image:
 
 - Replace **'image-name'** with a descriptive name for your image.
 
-### Demo image
-
-![build](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/build.png)
 
 ## 3. Tag the Docker Image
 
