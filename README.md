@@ -84,7 +84,9 @@ Go to the AWS Management Console → ECR → Your Repository to see the pushed i
 
 ![Image](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/images.png)
 
-Example Commands
+
+
+## Example Commands
 
 # Authenticate Docker to AWS ECR
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 123456789012.dkr.ecr.us-east-1.amazonaws.com
