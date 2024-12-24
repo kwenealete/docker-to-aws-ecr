@@ -1,0 +1,6 @@
+initial commit with Dockerized Node.js application
+
+- Added Dockerfile for building a Node.js application image.
+- Created `server.js` for a simple HTTP server.
+- Included `package.json` for managing dependencies.
+- Added README.md with step-by-step instructions for pushing Docker images to AWS ECR.
