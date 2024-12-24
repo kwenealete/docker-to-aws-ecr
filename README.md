@@ -29,9 +29,9 @@ aws ecr get-login-password --region <your-region> | docker login --username AWS 
 • <your-region> with your AWS region (e.g., us-east-1).
 • <aws_account_id> with your AWS account ID.
 
-![login-to-aws-ecr](app/images/login.png)
+![login-to-aws-ecr](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/login.png)
 
-![login-to-aws-ecr1](app/images/login1.png)
+![login-to-aws-ecr1](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/login1.png)
 
 2. Build the Docker Image
 
@@ -41,7 +41,7 @@ docker build -t <image-name> .
 
 • Replace <image-name> with a descriptive name for your image.
 
-![build](app/images/build.png)
+![build](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/build.png)
 
 3. Tag the Docker Image
 
@@ -53,9 +53,9 @@ docker tag <image-name>:latest <aws_account_id>.dkr.ecr.<your-region>.amazonaws.
 • <repository-name> with your ECR repository name.
 • <tag> with a version (e.g., v1 or latest).
 
-![tag](app/images/tag.png)
+![tag](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/tag.png)
 
-![tag1](app/images/tag1.png)
+![tag1](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/tag1.png)
 
 4. Push the Image to AWS ECR
 
@@ -63,14 +63,14 @@ Push the tagged image to AWS ECR:
 
 docker push <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com/<repository-name>:<tag>
 
-![push](app/images/push.png)
-![push1](app/images/push1.png)
+![push](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/push.png)
+![push1](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/push1.png)
 
 5. Verify the Image in ECR
 
 Go to the AWS Management Console → ECR → Your Repository to see the pushed image.
 
-![image](app/images/images.png)
+![Image](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/images.png)
 
 Example Commands
 
