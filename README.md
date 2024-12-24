@@ -1,4 +1,4 @@
-# Push Docker Image to AWS ECR
+# Push Docker Image to AWS ECR and Deploy to development server
 
 This repository demonstrates how to build and push a Docker image to AWS Elastic Container Registry (ECR).
 
@@ -99,3 +99,28 @@ docker tag my-node-app:1.0 123456789012.dkr.ecr.us-east-1.amazonaws.com/my-node-
 
 # Push the Docker image
 docker push 123456789012.dkr.ecr.us-east-1.amazonaws.com/my-node-app:1.0
+
+
+# Deploying Docker application on a server
+
+- With our docker image already hosted on AWS-ECR, create a *yaml file e.g docker-compose.yaml* in your project folder directory and configure it with the required services (sevice name, images of the named-service and ports).
+
+- Run the docker- compose command on the terminal:
+
+**docker-compose -f 'yaml-file-name' up**
+
+replace 'yaml-file-name' with your own
+
+### Demo image
+
+![alt-text](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/yaml.png)
+
+- Access the application on your browser via the various ports and make changes to see it works 
+
+### Demo Images
+
+
+![alt-text](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/data.png)
+
+
+ ![alt-text](https://github.com/kwenealete/docker-to-aws-ecr/blob/master/app/images/e-server.png)
