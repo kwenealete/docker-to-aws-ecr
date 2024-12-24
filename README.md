@@ -39,7 +39,7 @@ Run the following AWS CLI command to authenticate Docker with your AWS ECR:
 
 Navigate to the folder with your Dockerfile and build the image:
 
-**docker build -t 'image-name'** .
+**docker build -t 'image-name' .**
 
 - Replace **'image-name'** with a descriptive name for your image.
 
